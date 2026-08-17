@@ -1,0 +1,26 @@
+[workspace]
+
+[package]
+name = "neoplasm_nif"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "neoplasm_nif"
+path = "src/lib.rs"
+crate-type = ["dylib"]
+
+[dependencies]
+rustler = "0.33"
+log = "0.4"
+egui = "0.31"
+rfd = "0.15"
+
+# Windowing backend is platform-specific: X11 on unix, Win32 (default) on Windows.
+[target.'cfg(unix)'.dependencies]
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow", "x11"] }
+winit = { version = "0.30", features = ["x11"] }
+
+[target.'cfg(windows)'.dependencies]
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow"] }
+winit = { version = "0.30" }

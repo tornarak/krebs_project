@@ -1,0 +1,18 @@
+[workspace]
+
+[package]
+name = "libkrebs_nif"
+version = "0.1.0"
+authors = []
+edition = "2018"
+
+[lib]
+name = "libkrebs_nif"
+path = "src/lib.rs"
+crate-type = ["dylib"]
+
+[dependencies]
+rustler = "0.33"
+log = "0.4"
+
+libkrebs = { path = "../../../libkrebs" }

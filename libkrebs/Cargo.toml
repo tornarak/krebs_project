@@ -1,0 +1,23 @@
+[package]
+authors = ["krebs dev"]
+categories = ["data-structures", "development-tools::ffi", "game-development", "os", "os::windows_apis"]
+edition = "2018"
+license = "MIT"
+name = "libkrebs"
+readme = "README.md"
+version = "1.1.0"
+
+[dependencies]
+thiserror = "1"
+lazy_static = "1.4.0"
+log = "0.4"
+maplit = "1.0.2"
+bitflags = "1.2.1"
+rand = "0.7.3"
+rayon = "1"
+
+[target.'cfg(windows)'.dependencies]
+winapi = { version = "0.3", features = ["errhandlingapi", "impl-default", "handleapi", "heapapi", "memoryapi", "processthreadsapi", "psapi", "sysinfoapi", "tlhelp32", "winuser"] }
+
+[target.'cfg(unix)'.dependencies]
+libc = "0.2"

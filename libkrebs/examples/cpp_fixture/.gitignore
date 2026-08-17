@@ -1,0 +1,5 @@
+cpp_component
+*.exe
+*.ilk
+*.obj
+*.pdb

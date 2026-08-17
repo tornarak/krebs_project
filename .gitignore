@@ -1,0 +1,8 @@
+/.expert
+/target
+Cargo.lock
+/misc
+/deprecated
+**/priv/native/*.so
+**/priv/native/*.dll
+**/priv/native/*.dylib
