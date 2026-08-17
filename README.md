@@ -406,6 +406,9 @@ watching the GUI and an AI client driving MCP can look at the same scan results 
 same time, and the GUI has an "IEx" button that drops straight into a REPL underneath it,
 so point-and-click never gets in the way of the command line.
 
+![Neoplasm - Scanner Tab](neoplasm0.png)
+![Neoplasm - Hex Dump Tab](neoplasm1.png)
+
 ---
 
 # How did things end up like this?
